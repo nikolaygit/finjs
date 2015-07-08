@@ -3,22 +3,25 @@
   "version": "0.0.1",
   "description": "Finance Calculator",
   "main": "fin.js",
-  "scripts": {
-    "test": "make test"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nikolaygit/finjs.git"
+    "url": "https://github.com/nikolaygit/finjs.git"
   },
   "keywords": [
-    "finance", "finanzen",
-    "calculator", "rechner",
-    "tax", "steuer",
-    "vat", "mwst",
-    "net","netto",
-    "gross", "brutto"
+    "finance",
+    "finanzen",
+    "calculator",
+    "rechner",
+    "tax",
+    "steuer",
+    "vat",
+    "mwst",
+    "net",
+    "netto",
+    "gross",
+    "brutto"
   ],
-  "author": "Nikolay Georgiev",
+  "author": "Nikolay Georgiev <nikolay@georgiev.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nikolaygit/finjs/issues"
@@ -26,6 +29,11 @@
   "homepage": "https://github.com/nikolaygit/finjs#readme",
   "devDependencies": {
     "chai": "^3.0.0",
-    "mocha": "^2.2.5"
-  }
+    "mocha": "^2.2.5",
+    "pre-git": "^0.6.1"
+  },
+  "scripts": {
+    "test": "mocha -R spec test/*spec.js"
+  },
+  "pre-commit": "npm test"
 }
