@@ -1,6 +1,6 @@
 # finjs
 
-* :en: Financial calculator for taxes: calculate net, VAT and gross amounts.
+* Financial calculator for taxes: calculate net, VAT and gross amounts.
 * :de: Finanzrechner: Steuer, Netto, MwSt und Brutto berechnen.
 
 ## Features:
