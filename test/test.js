@@ -51,6 +51,19 @@ describe('fin', function() {
     });
   });
 
+  describe('multiply', function() {
+
+    it('should multiply floating numbers', function() {
+      var multiplications = [
+        [2.18, 100, 218]
+      ];
+
+      multiplications.forEach(function(multi) {
+        expect(fin(multi[0] * multi[1])).to.equal(multi[2]);
+      });
+    });
+  });
+
   describe('vat', function() {
 
     it('should have valid VAT input data', function() {
