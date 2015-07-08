@@ -3,6 +3,8 @@
 * Financial calculator for taxes: calculate net, VAT and gross amounts.
 * :de: Finanzrechner: Steuer, Netto, MwSt und Brutto berechnen.
 
+[![NPM][npm-icon]][npm-url]
+
 ## Features:
 
 * correct floating point calculations.
@@ -53,3 +55,7 @@ Development features:
 ## History
 
 * 0.0.1 - initial commit
+
+
+[npm-icon]: https://nodei.co/npm/finjs.png?downloads=true
+[npm-url]: https://npmjs.org/package/finjs
