@@ -1,6 +1,6 @@
 /**
- * @source https://github.com/nikolaygit/steuerjs.git/blob/master/index.js
- * @license MIT https://github.com/nikolaygit/steuerjs.git/index.js/blob/master/LICENSE
+ * @source https://github.com/nikolaygit/finjs/blob/master/fin.js
+ * @license MIT https://github.com/nikolaygit/finjs/blob/master/LICENSE
  */
 /* jshint -W040 */
 "use strict";
@@ -33,8 +33,25 @@
     }
   });
 
+  /**
+   * The tax rate for calculating VAT
+   *
+   * @type {number}
+   */
   fin.taxRate = 19;
+
+  /**
+   * The number of decimal places following the decimal point.
+   * @type {number}
+   */
   fin.precision = 2;
+
+  /**
+   * Calculate VAT from net amount
+   *
+   * @param netNumber the net amount
+   * @returns {number} the VAT for the net amount
+   */
   fin.vat = function(netNumber) {
     return this(netNumber * this.taxRate / 100);
   };
@@ -43,7 +60,7 @@
    * Calculate net from gross
    *
    * @param grossNumber the gross amount
-   * @returns {string} the net amount
+   * @returns {number} the net amount
    */
   fin.net = function(grossNumber) {
     return fin(grossNumber * 100 / (100 + this.taxRate));
@@ -53,7 +70,7 @@
    * Calculate gross from net
    *
    * @param netNumber the net amount
-   * @returns {string} the gross amount
+   * @returns {number} the gross amount
    */
   fin.gross = function(netNumber) {
     return fin(netNumber + fin.vat(netNumber));
@@ -63,12 +80,12 @@
    * Calculate the VAT for the given gross amount.
    *
    * @param grossNumber the gross amount
-   * @returns {string} the VAT of the gross amount
+   * @returns {number} the VAT of the gross amount
    */
   fin.vatFromGross = function(grossNumber) {
+    // TODO: simplify the calculation
     return fin.vat(fin.net(grossNumber));
   };
-
 
   return fin;
 });
