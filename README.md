@@ -3,7 +3,11 @@
 * Financial calculator for taxes: calculate net, VAT and gross amounts.
 * :de: Finanzrechner: Steuer, Netto, MwSt und Brutto berechnen.
 
-[![NPM][npm-icon]][npm-url]
+[![NPM][npm-image]][npm-url]
+
+[![Build status][ci-image]][ci-url]
+[![dependencies][dependencies-image]][dependencies-url]
+[![devdependencies][devdependencies-image]][devdependencies-url]
 
 ## Features:
 
@@ -57,5 +61,11 @@ Development features:
 * 0.0.1 - initial commit
 
 
-[npm-icon]: https://nodei.co/npm/finjs.png?downloads=true
+[npm-image]: https://nodei.co/npm/finjs.png?downloads=true
 [npm-url]: https://npmjs.org/package/finjs
+[ci-image]: https://travis-ci.org/nikolaygit/finjs.png?branch=master
+[ci-url]: https://travis-ci.org/nikolaygit/finjs
+[dependencies-image]: https://david-dm.org/nikolaygit/finjs.png
+[dependencies-url]: https://david-dm.org/nikolaygit/finjs
+[devdependencies-image]: https://david-dm.org/nikolaygit/finjs/dev-status.png
+[devdependencies-url]: https://david-dm.org/nikolaygit/finjs#info=devDependencies
