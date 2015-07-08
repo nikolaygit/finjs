@@ -88,5 +88,19 @@
     return fin.vat(fin.net(grossNumber));
   };
 
+  /**
+   * Validates net, vat and gross values given in an array.
+   *
+   * @param {Array} netVatGrossArr Array format: [netAmount, vat, grossAmount]
+   * @returns {boolean} true if the three values are correctly calculated.
+   */
+  fin.validateNetVatGross = function(netVatGrossArr) {
+    var isSumCorrect = fin(netVatGrossArr[0] + netVatGrossArr[1]) === netVatGrossArr[2];
+    var isNetCorrect = netVatGrossArr[0] === fin.net(netVatGrossArr[2]);
+    var isVatCorrect = netVatGrossArr[1] === fin.vat(netVatGrossArr[0]) && netVatGrossArr[1] === fin.vatFromGross(netVatGrossArr[2]);
+    var isGrossCorrect = netVatGrossArr[2] === fin.gross(netVatGrossArr[0]);
+    return isSumCorrect && isNetCorrect && isVatCorrect && isGrossCorrect;
+  };
+
   return fin;
 });

@@ -38,6 +38,7 @@ Development features:
 * ``fin.gross(100) === 119;`` // true
 * ``fin.net(119) === 100;`` // true
 * ``fin.vatFromGross(119) === 19;`` // true
+* ``fin.validateNetVatGross([100, 19, 119]) === true;`` // true
 
 ## Roadmap
 
@@ -58,6 +59,7 @@ Development features:
 
 ## History
 
+* 0.0.2 - add ``fin.validateNetVatGross([net, vat, gross])`` function and tests.
 * 0.0.1 - initial commit
 
 

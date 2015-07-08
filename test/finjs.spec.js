@@ -12,6 +12,8 @@ describe('fin', function() {
     [5000, 950, 5950],
     [1000, 190, 1190],
     [100, 19, 119],
+    [66.82, 12.70, 79.52], // 66.82 * 19/100 = 12.695799999999998
+    [66.81, 12.69, 79.5], // 66.81 * 19/100 = 12.693900000000001
     [50, 9.5, 59.5],
     [33, 6.27, 39.27],
     [20, 3.8, 23.8],
@@ -66,9 +68,9 @@ describe('fin', function() {
 
   describe('vat', function() {
 
-    it('should have valid VAT input data', function() {
+    it('should validate net, VAT and gross values', function() {
       netVatGrossArr.forEach(function(netVatGross) {
-        expect(fin(netVatGross[0] + netVatGross[1])).to.equal(netVatGross[2]);
+        expect(fin.validateNetVatGross(netVatGross));
       });
     });
 
